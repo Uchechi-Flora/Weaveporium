@@ -1,0 +1,260 @@
+@import url(all.css);
+
+/*
+body{
+    overflow-x: hidden;
+}*/
+nav {
+    overflow: hidden;
+    height:60px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    /*box-shadow: 0 0px 2px 0px rgba(0,0,0,0.2);*/
+}
+
+
+/*expansion of search bar*/
+.container{
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: transparent;
+    border-color: #ed4529;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container.active{
+    width: 400px;
+}
+.container .icon{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .icon .search{
+    font-size: 21px;
+    cursor: pointer;
+    color: black;
+}
+.container .input{
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .input input{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    font-family: candara;
+    color: #213d59;
+    outline: none;
+}
+.container .input .clear{
+    position: absolute;
+    right: -25px;
+    top:50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #213d59;
+}
+/*DIVING THE PROFILE INTO 2*/
+#rightdiv{
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
+   /* background-color: rgb(189, 141, 234);
+    width:30%; /*you can add your own height or as you add content the height adjusts*/
+    float: right;
+    text-align: center;/**/
+}
+#rightdiv h4{
+    font-size: 20px;
+    margin-top: 5px;
+    letter-spacing: 0.2em;
+    font-family: candara;
+    text-align: center;
+}
+#rightdiv h3{
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    font-family: candara;
+    text-align: center;
+}
+#rightdiv p{
+    font-size: 13px;
+    font-family: candara;
+    color:#ed4529;
+    word-spacing: 0.2em;
+}
+#leftdiv{
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.2);
+    /*background-color: pink;
+    border: 3px solid black;*/
+    width: 70%;
+    height:55vh;
+    float: left;
+}
+/*STYLING THE TABLE ON THE RIGHT DIV*/
+span{
+    display: flex;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    font-family: geneva;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #ed4529;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #ed4529;
+}
+
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #213d59;
+}
+/*STYLING PROFILE AND COVER PHOTO*/
+.profile-card{
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    color:black;
+}
+.cover-pic{
+    display: block;
+    /*width:100%;*/
+    width:1163px;
+    height:200px;
+}
+.profile-pic{
+    width:120px;
+    border-radius: 50%;
+    margin-top: -80px;
+    margin-left: -300px;
+    box-shadow: 0 0 0 0px #213d59;
+    border: 2px solid black;
+    transition: box-shadow 0.5s;
+}
+.profile-pic:hover{
+    box-shadow: 0 0 0 5px #213d59;
+}
+.profile-text{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.profile-text h4{
+    font-size: 20px;
+    font-family:verdana;
+    font-weight:bold;
+}
+.profile-text h5{
+    font-family: candara;
+    font-size: 17px;
+    color: grey;
+}
+.text{
+    margin-top: 10px;
+}
+.text h5{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: geneva;
+    color:#213d59;
+}
+.profile-button{
+  margin-top: 10px;
+}
+.button{
+    padding: 7px;
+    margin-left: 4px;
+    background: transparent;
+    border-radius: 10px;
+    border-color: #213d59;
+    font-family: candara;
+    transition: ease-in-out 0.5s;
+}
+.button:hover{
+    border-color: #ed4529;
+    font-weight: 600;
+}
+
+/*UNDER THE PROFILE DIV*/
+
+.others-text{
+    padding: 10px;
+    margin:5px 400px;
+    position: relative;
+    display: inline-block;
+}
+.others-text h5{
+    font-family: candara;
+    color: #213d59;
+}
+.other-accounts{
+    width:70%;
+    height: 30vh;
+    /*background-color: red;*/
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.accounts{
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    border:1px solid #213d59;
+    text-align: center;
+    flex: 0 0 auto
+}
+.accounts h4{
+    font-size: 16px;
+    margin-top: 16px;
+    font-family: candara;
+}
+.accounts h5{
+    font-size: 15px;
+    margin-top: 15px;
+    font-family: candara;
+}
+.square{
+    width:198px;
+    height: 100px;
+    object-fit: cover;
+    /*background-color: #ed4529;
+    border:1px solid;*/
+}
+.circle{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: -20px auto;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+

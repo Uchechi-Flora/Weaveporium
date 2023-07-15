@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <script type = "text/javascript" src = "./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./assets/css/add_stock.css" />
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link href="./assets/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <title>ADD TO STOCK</title>
+</head>
+<body>
+
+    <!--TO CONTAIN THE CONTROLS, SAVE AS DRAFT, CANCEL, DELETE-->
+    <!--TO CONTAIN THE CONTROLS, ALSO TO SAY 1 ITEM POSTED AND GIVE OPTION TO ADD ANOTHER-->
+
+    <div id="rightdiv">
+
+        <div class="top_controls">
+            <button class="btn_control" id="delete" onclick="showErrorMessage()"><i class="fa fa-trash" id="Dicon"></i>DELETE</button>
+            <button class="btn_control" id="save" onclick="showSaveMessage()"><i class="fa fa-check" id="Sicon"></i>SAVE AS DRAFT</button>
+        </div>
+
+        <div class="post_text">
+            <h4>1 item posted</h4>
+            <a href="#" style="cursor: pointer;" id="add_item"><i class="fa-solid fa-circle-plus"></i>ADD ANOTHER ITEM</a>
+        </div>
+
+        <div class="error-message" id="errorMessage">Oops! An error occurred while deleting.</div>
+        <div class="save-message" id="saveMessage">Item saved as draft. Be sure to edit later!</div>
+
+        <br> <br> <br>
+        <div class="question-links">
+            <h4>Q/A LINKS</h4>
+            <ul>
+                <li><a href="#">How do I reach out to buyers?</a></li>
+                <li><a href="#">How do I use Weaveporium?</a></li>
+                <li><a href="#">Is there an automatic addition of delivery fee?</a></li>
+                <li><a href="#">Can I upgrade my account to a crotcheter as a buyer?</a></li>
+            </ul>
+        </div>
+
+       
+    </div> <!--END OF RIGHT DIV-->
+
+
+
+
+
+
+
+    <div id="leftdiv">
+
+        <div class="profile">
+                <img src="./images/fz.png" class="profile-pic">
+               <h5><b>FLORA'S ZONE</b></h5>
+        </div>
+<hr>
+
+        <div class="title">
+            <h3>ADD NEW PRODUCTS</h3>
+        </div>
+
+
+        <form id="item_form">
+            <label for="image_input">Upload item image</label>
+            <br>
+            <input type="file" id="image_input" multiple accept="image/*">
+<br>
+<br>
+
+            <label for="product_name">Product Name</label>
+            <br>
+            <input type="text" id="product_name" onkeyup="displayText()">
+
+<br>
+<br>
+
+            <label for="description">Product Description</label>
+            <br>
+            <textarea>30 characters max</textarea>
+
+<br>
+<br>
+            <label for="category">Category</label>
+            <div id="wrapper">
+                <div id="menu">
+                    <ul>
+                        <li id="opt1"> <a href="#">Fashion</a></li>
+                        <li id="opt2"> <a href="#">Household Items</a></li> 
+                        <li id="opt3"> <a href="#">Bavarian Crotchet</a></li>
+                        <li id="opt4"> <a href="#">Bullion Crotchet</a></li>
+                    </ul>
+                </div> <!--end of menu-->
+            </div> <!--end of wrapper-->
+<br>
+<br>
+            <label for="color">Choose Available Colors<em>(3 max)</em></label> 
+            <br> 
+            <input type="color" id="color1" onchange="getFirstColor()">
+            <input type="color" id="color2" value="#ffffff" onchange="getSecondColor()">
+            <input type="color" id="color3" value="#964b00" onchange="getThirdColor()">    
+<br>
+<br>
+            <label for="size">Pick Available Sizes</label>
+            <div id="size_wrapper">
+                <div id="menu" class="size_menu">
+                    <ul>
+                        <li id="size1"> <a href="#">S</a></li>
+                        <li id="size2"> <a href="#">M</a></li> 
+                        <li id="size3"> <a href="#">L</a></li>
+                        <li id="size4"> <a href="#">XL</a></li>
+                    </ul>
+                </div> <!--end of menu-->
+            </div> 
+<br>
+<br>
+            <label for="qty">Quantity Available</label>  
+            <br>
+            <input type="number" id="quantity">
+<br>
+<br>
+            <label for="qty">Price of Item</label>  
+            <br>
+            <input type="number" id="price" onkeyup="displayPrice()" placeholder="0.00">
+
+<br>
+            <div class="buttons">
+                <button class="post-btn">POST</button>
+            </div>
+
+
+        </form>
+       
+
+
+    </div>
+
+
+
+    <div id="middiv">
+        <div class="mid-title">
+            <h3>ITEM PREVIEW</h3>
+            <i class="fa-solid fa-4x fa-camera" id="camera"></i>
+        <!--    <hr> -->
+        </div>
+        <!--DIV FOR KELETAL ANIMATION-->
+        <div class="skeleton">
+            <div id="image-prev"></div>
+            </div>
+
+            <div class="prev-text">
+            <div id="prev-title" class="image-text"></div> <br>
+            <div id="prev-color" class="image-text"></div> <br>
+            <div id="prev-size" class="image-text"></div> <br>
+            <div id="prev-price" class="image-text"></div>
+        </div>
+
+        <!--
+        <div class="button-preview">
+            <button class="prev-btn" id="prev-btn">ADD TO CART</button>
+        </div> -->
+
+
+
+      <!--END OF SKELETAL DIV-->  </div>
+    </div>
+
+
+<script>
+
+ //FOR ADD NEW ITEM
+    $(".post_text").hide()
+    $(".post-btn").click(function() {
+        setTimeout(function() {
+            $(".post_text").show()
+        }, 1000)
+    })
+
+    //FOR ITEM FORM AND ALSO TO CLEAR EVRYTHING WHEN ADD NEW ITEM IS CLICKED
+   document.getElementById("add_item").addEventListener("click", function(event) {
+   event.preventDefault();
+
+   document.querySelector('.skeleton').innerHTML = '';
+   document.querySelector('.prev-text').innerHTML = '';
+
+   document.getElementById("item_form").reset();
+
+   const elements = document.querySelectorAll("#opt1,#opt2,#opt3,#opt4,#size1,#size2,#size3,#size4");
+   elements.forEach(element => {
+      element.style.background = 'transparent';
+   });
+   
+});
+
+   
+    
+   
+
+    //FOR CATEGORY
+    let f_category = $("#opt1")
+    let s_category = $("#opt2")
+    let t_category = $("#opt3")
+    let fth_category = $("#opt4")
+
+    f_category.click(function() {
+        f_category.css("background", "#ed4529")
+    })
+
+    s_category.click(function() {
+        s_category.css("background", "#ed4529")
+    })
+
+    t_category.click(function() {
+        t_category.css("background", "#ed4529")
+    })
+
+    fth_category.click(function() {
+        fth_category.css("background", "#ed4529")
+    })
+
+    //FOR SIZE
+        let f_size = $("#size1")
+        let s_size = $("#size2")
+        let t_size = $("#size3")
+        let fth_size = $("#size4")
+
+        f_size.click(function() {
+        f_size.css("background", "#ed4529")
+    })
+
+    s_size.click(function() {
+        s_size.css("background", "#ed4529")
+    })
+
+    t_size.click(function() {
+        t_size.css("background", "#ed4529")
+    })
+
+    fth_size.click(function() {
+        fth_size.css("background", "#ed4529")
+    })
+
+   //TO PREVIEW UPLOADED IMAGES
+   // JavaScript code
+const imageInput = document.getElementById('image_input');
+const preview = document.getElementById('image-prev');
+//const skeletonContainer = getElementsByClassName('skeleton');
+
+
+imageInput.addEventListener('change', () => {
+  const file = imageInput.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', () => {
+    const img = new Image();
+    img.src = reader.result;
+    
+
+    img.onload = () => {
+      const width = 550; // Set the desired width
+      const scaleFactor = width / img.width;
+      const height = img.height * scaleFactor; // Calculate the proportional height
+
+      img.width = width; // Set the width of the image
+      img.height = height; // Set the height of the image
+
+      img.classList.remove('skeleton');
+      img.style.borderRadius = '10px';
+
+      preview.innerHTML = ''; // Clear the preview div
+      preview.appendChild(img); // Append the image to the preview div
+    }
+  });
+
+  reader.readAsDataURL(file);
+});
+
+//TO DISPLAY USER ENTETERD TITLE
+function displayText() {
+    const inputValue = document.getElementById('product_name').value;
+    const prevTitle = document.getElementById('prev-title')
+    prevTitle.innerText = inputValue
+    prevTitle.style.display = 'block';
+}
+
+//TO DISPLAY USER SELECTED COLORS
+function getFirstColor() {
+  const color1 = document.getElementById("color1").value;
+  displayPreviewColor(color1);
+}
+
+function getSecondColor() {
+  const color2 = document.getElementById("color2").value;
+  displayPreviewColor(color2);
+}
+
+function getThirdColor() {
+  const color3 = document.getElementById("color3").value;
+  displayPreviewColor(color3);
+}
+function displayPreviewColor(color) {
+  const colorDiv = document.createElement('div'); // Create a new div element
+  colorDiv.style.backgroundColor = color; // Set the background color of the div to the selected color
+  colorDiv.style.width = '50px';
+  colorDiv.style.height = '50px';
+  colorDiv.style.display = "inline-block";
+  colorDiv.style.marginRight = '5px';
+  const colorContainer = document.getElementById('prev-color');
+  colorContainer.appendChild(colorDiv); // Add the new div to the container div
+}
+
+
+
+
+//TO DISPLAY SELECTED SIZES
+window.onload = function() {
+  let sizes = document.querySelectorAll('.size_menu li');
+  let selectedSizeDisplay = document.getElementById('prev-size');
+
+  for (let i = 0; i < sizes.length; i++) {
+    sizes[i].addEventListener('click', function() {
+      this.classList.toggle('selected');
+      
+      let selectedSizes = Array.from(document.querySelectorAll('.size_menu li.selected'), element => element.textContent);
+      selectedSizeDisplay.textContent = selectedSizes.join(', ');
+    });
+  }
+};
+
+//TO DISPLAY ENTERED PRICE 
+function displayPrice() {
+    const priceValue = document.getElementById('price').value;
+
+// Format the price value with commas and add ".00" at the end
+const formattedPriceValue = Number(priceValue.replace(/,/g, '')).toLocaleString("en-NG", {style: "currency", currency: "NGN"});
+
+// Update the text content of the existing element with the formatted price value
+const prevPriceElement = document.getElementById('prev-price');
+if (prevPriceElement) {
+    prevPriceElement.textContent = formattedPriceValue;
+} else {
+    const prevPrice = document.createElement('span');
+    prevPrice.textContent = formattedPriceValue;
+    prevPrice.id = 'prev-price';
+    document.body.appendChild(prevPrice);
+}
+      
+
+} 
+//TO DISPLAY THIS WHEN DELETE BUTTON IS CLICKED
+function showErrorMessage() {
+  const errorMessage = document.getElementById("errorMessage");
+
+  // Show the error message
+  errorMessage.style.display = "block";
+
+  // Hide the error message after 3 seconds
+  setTimeout(function () {
+    errorMessage.style.display = "none";
+  }, 3000);
+}
+
+//TO DISPLAY THIS WHEN SAVE BUTTON IS CLICKED
+function showSaveMessage() {
+  const saveMessage = document.getElementById("saveMessage");
+
+  // Show the error message
+  saveMessage.style.display = "block";
+
+  // Hide the error message after 3 seconds
+  setTimeout(function () {
+    saveMessage.style.display = "none";
+  }, 3000);
+}
+
+
+    
+</script>
+
+
+    <script src="./bootstrap assets/js/bootstrap.min.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+</body>

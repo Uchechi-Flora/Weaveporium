@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <script type = "text/javascript" src = "./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./assets/css/signup.css" />
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link href="./assets/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <title>SIGN UP</title>
+</head>
+<body>
+    <!--TO CONTAIN LOGO AND TITLE-->
+    
+    <p class="title">
+        <img src="./images/logo.png" width="90">
+        SIGN UP WITH US AS A CROTCHTER
+    </p>
+       <!--TO CONTAIN SIGN UP INFO, COUNTER, ANYTHING-->
+       <div class="my_container">
+        
+       <!-- <h3 class="title">SIGN UP WITH US AS A CROTCHTER</h3> -->
+
+        <!--this is the div that will be in flex mode for picture and signup info-->
+    <!--   <div class="flex_container">  --> 
+
+
+
+           <div class="text">
+           <img src="./images/join_2.png"  width="350" class="text_image">
+           <div class="ellipse"></div>
+           </div>
+           
+           <div class="form">
+           <div class="curve"></div> 
+            <div  class="form_title">
+                <h4>JOIN AND SELL</h4> </div>
+                
+                <form class="signup">
+                    <label for="name"><b>NAME</b></label>
+                    <br>
+                    <div class="input_field">
+                    <i class="fa-solid fa-user icon input_icons"></i> 
+                    <input type="text" placeholder="Enter Full Name" name="name"></i> 
+                </div>
+
+                <br>
+                <label for="name"><b>EMAIL</b></label>
+                    <br>
+                    <div class="input_field">
+                    <i class="fa-solid fa-envelope input_icons"></i> 
+                    <input type="text" placeholder="JaneDoe@anything.com" name="email"></i> 
+                </div>
+
+                <br>
+                <label for="name"><b>PHONE NUMBER</b></label>
+                    <br>
+                    <div class="input_field">
+                    <i class="fa-solid fa-phone input_icons"></i>
+                    <input type="number" placeholder="08111111111" name="phoneno" ></i> 
+                </div>
+
+                <br>
+                <label for="name"><b>CITY, STATE</b></label>
+                    <br>
+                    <div class="input_field">
+                    <i class="fa-solid fa-city input_icons"></i>
+                    <input type="text" placeholder="Port-Harcourt, Rivers State" name="city" ></i> 
+                </div>
+
+                <div class="submit-btn">
+                    <button class="btn-submit" id="password_valid">NEXT</button>
+                </div>
+
+                <div class="login_text">
+                    <h5>Already have an account?</h5>
+                    <a href="#">LOG IN</a>
+                </div>
+                </form>
+
+
+                <form class="password">
+                    <label for="name"><b>PASSWORD</b></label>
+                 <!--  <h6 class="error_message" id="not_eight">NOT UP TO 8 CHARACTERS</h6>   --> 
+                    <div class="input_field">
+                    <i class="fa-solid fa-lock input_icons"></i>
+                    <input type="password" placeholder="Password" maxlength="8" id="password_type"></i> 
+                    <h6 class="display_text">8 characters max</h6>
+                </div>
+
+                <br>
+                <label for="name"><b>CONFIRM PASSWORD</b></label>
+                <h6 class="error_message" id="unmatch">PASSWORDS DO NOT MATCH</h6>
+                <div class="input_field">
+                <i class="fa-sharp fa-solid fa-key input_icons"></i>
+                <input type="password" placeholder="Confirm Password" id="confirm_password" onkeyup="password()"></i> 
+            </div>
+
+            <div class="submit-btn">
+                <button class="btn-submit" id="stock_btn">NEXT</button>
+            </div>
+                </form>
+ 
+            </div>
+
+       </div>
+
+       
+
+<script>
+
+    //TO CHANGE FROM FIRST FORM TO THE PASSWORD FORM
+    $("#password_valid").click(function(event){
+        event.preventDefault()
+        $(".signup").hide()
+        $(".password").show()
+        $("h4").html("SET UP A PASSWORD")
+
+    })
+   
+
+
+//VALIDATE FORM PASSWORDS
+             $("#unmatch").hide()
+               
+            function password(){
+                var password_error = $("#password_type").val()
+                var confirm_error = $("#confirm_password").val()
+                if (password_error != confirm_error) {
+                    $("#unmatch").show()
+                } else{
+                    $("#unmatch").hide()
+                }
+            }
+        // FROM PASSWORD FORM TO ADD TO STOCK PAGE
+        $("#stock_btn").click(function(event) {
+            event.preventDefault()
+            window.location.href = "/add_stock.html"
+        })
+</script>
+
+
+<script type="text/javascript" src="./assets/js/main.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.min.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+</body>
+</html>

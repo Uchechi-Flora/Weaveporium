@@ -1,0 +1,360 @@
+
+#rightdiv{
+    background-color:white;
+    width:33.33%;
+    float: right;
+    /*height:1038px;*/
+
+}
+.top_controls{
+    margin-top: 10px;
+    margin-left: 210px;
+}
+.btn_control{
+    width: 150px;
+    margin: 4px;
+    border-radius: 7px;
+    font-family: cambria;
+    background: transparent;
+    font-weight: 550;
+}
+.post_text{
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: candara;
+}
+.post_text h4{
+    font-size: 18px;
+}
+.post_text > a i{
+    font-size: 14px;
+}
+.post_text > a{
+    font-size: 13px;
+}
+
+.top_controls > .btn_control i::before{
+    padding-right: 6px;
+}
+
+#delete{
+    border:2px solid #213d59
+}
+#save{
+    background: #4c85bd;
+}
+#Dicon{
+    color: #ed4529;
+    font-size: 14px;
+}
+#Dicon:hover{
+    animation: shake 0.8s;
+}
+@keyframes shake{
+    0% {transform: translateY(0);}
+    25%{transform: translateY(5px);}
+    50%{transform: translateY(-5px);}
+    75%{transform: translateY(5px);}
+    100%{transform: translateY(0);}
+}
+#Sicon{
+    color: #213d59;
+    font-size: 14px;
+}
+.error-message{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+
+}
+.save-message{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #4c85bd;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+
+}
+.question-links{
+   margin-left: 50px;
+}
+.question-links h4{
+    font-family: candara;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.question-links ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .question-links li {
+    display: block; /* Display li elements vertically */
+    margin-bottom: 10px; /* Adjust spacing between li elements */
+  }
+  
+  .question-links a {
+    text-decoration: underline; /* Add underline to links */
+    font-family: "Arial", sans-serif; /* Set desired font-family */
+  }
+  
+
+
+
+#leftdiv{
+    background-color: white;
+    width:33.33%;
+    float:left;
+    margin-bottom: 10px;
+    /*border-right: 2px solid #f0f0f0;*/
+    box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.25);
+}
+    /*
+    overflow-y: scroll;
+    height: 800px;
+} 
+#leftdiv::-webkit-scrollbar{
+    display: none;
+}*/
+
+.profile{
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+}
+.profile h5{
+    margin-top: 25px;
+    margin-left: 10px;
+    font-family: arial;
+    font-size: 19px;
+}
+.profile-pic{
+    margin-top: 7px;
+    margin-left: 105px;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.title{
+    margin-left: 12px;
+    /*text-align: center;*/
+    font-family: candara;
+}
+.title h3{
+    font-size: 17px;
+    font-weight: 600;
+}
+#image_input{
+    color: #ed4529;
+    font-family: candara;
+    font-size: 15px;
+}
+input[type="file"]::-webkit-file-upload-button{
+    background: transparent;
+    border-radius: 27px;
+    width:100px;
+    padding: 6px;
+    transition: 0.3s ease-in-out;
+}
+input[type="file"]::-webkit-file-upload-button:hover{
+    background: #ed4529;
+}
+form{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+label{
+    color: #213d59;
+    font-family: cambria;
+    font-size: 20px;
+}
+input[type="text"], input[type="number"]{
+    width:200px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+textarea{
+    width:60%;
+    height:200px;
+    border:2px solid black;
+    border-radius: 7px;
+    padding:7px;
+    color:#213d59;
+}
+#wrapper{
+    margin-left: -30px;
+}
+#menu li{
+    list-style: none;
+    float: left;
+    margin-top: -15px;
+    background: transparent;
+}
+#menu li:hover{
+    background: #ed4529;
+}
+#menu ul li a {
+    padding: 5px;
+    font-size: 18px;
+    font-family: candara;
+    text-decoration: none;
+    height: 30px;
+    color:black;
+   position: relative;
+   display: block;
+   border: 1px solid #213d59;
+}
+#size_wrapper{
+    margin-left: -20px;
+}
+.buttons{
+    text-align: center;
+    margin-top: 13px;
+}
+.post-btn{
+    width: 150px;
+    padding: 3px;
+    border-radius: 10px;
+    color: #213d59;
+    background: transparent;
+    font-family: garamond;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+.post-btn:hover{
+    background: #ed4529;
+}
+
+#middiv{
+    background-color:white;
+    width:33.33%;
+    margin: 0 auto;
+      
+}
+.mid-title{
+    margin-top: 2px;
+    background-color: whitesmoke;
+    text-align:left;
+    display: flex;
+    margin-left: 11px;
+
+    border-radius: 27px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    /*
+    background: #ed4529;
+    border-radius: 7px;
+    clip-path: inset(0 round 7px);*/
+}
+#camera{
+    margin-left: 300px;
+    transform: rotate(-24deg);
+    font-size: 58px;
+    color: #213d59;
+}
+
+.mid-title h3 {
+    padding-top: 30px;
+    margin-left: 14px;
+    font-family: candara;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.prev-text{
+    background-color: #f0f0f0; /* set the background color */
+    display: inline-block; /* set the display property as inline block */
+    height: 250px; /* set the height */
+    position: relative; /* set the position property to relative */
+    width: 100%; 
+    margin-top: 63px;
+    margin-left: 15px;
+    border-radius: 10px;
+
+    /*margin-top: 30px;*/
+}
+
+.prev-text::before{
+    content: ''; /* add empty content */
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); /* add gradient to make it appears like a shadow */
+    top: 0; /* position from top */
+    left: -200px; /* move it outside the frame to animate it */
+    height: 100%; 
+    position: absolute;
+    width: 200px; 
+    animation: loading 1s cubic-bezier(0.4, 0.0, 0.2, 1) 5; /* set animation with desired timing function and looping */
+}
+@keyframes loading {
+    from { left: -200px; } /* starting point for the keyframe */
+    to { right: 50px; } /* ending point */
+  }
+#prev-title{
+    font-size: 22px;
+    font-weight: 600;
+}
+.image-text{
+    font-size: 20px;
+    color: #213d59;
+    font-family: cambria;
+    margin-left: 10px;
+}
+#image-prev{
+    text-align: center;
+}
+.button-preview{
+    text-align: center;
+}
+.prev-btn{
+    /*display: none;*/
+    position: relative;
+    top:-70px;
+    width: 200px;
+    padding: 3px;
+    border-radius: 10px;
+    color: black;
+    background: #4c85bd;
+    font-family: cambria;
+    font-weight: 600;
+    font-size: 18px;
+    transition: filter 0.3s ease-in-out;
+}
+.prev-btn:hover{
+   filter:brightness(80%)
+}
+
+.skeleton{
+    background-color: #f0f0f0; /* set the background color */
+    display: inline-block; /* set the display property as inline block */
+   /* height: 927px; /* set the height */
+    height:500px ;
+    position: relative; /* set the position property to relative */
+    width: 100%; 
+    margin-top: 35px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
+.skeleton::before{
+    content: ''; /* add empty content */
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); /* add gradient to make it appears like a shadow */
+    top: 0; /* position from top */
+    left: -200px; /* move it outside the frame to animate it */
+    height: 100%; 
+    position: absolute;
+    width: 200px; 
+    animation: loading 1s cubic-bezier(0.4, 0.0, 0.2, 1) 5; /* set animation with desired timing function and looping */
+}
+@keyframes loading {
+    from { left: -200px; } /* starting point for the keyframe */
+    to { left: calc(100% + 50px); } /* ending point */
+  }

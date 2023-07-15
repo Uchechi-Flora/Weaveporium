@@ -1,0 +1,536 @@
+body{
+    overflow-x: hidden;
+}
+nav {
+    overflow: hidden;
+    height:60px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    /*box-shadow: 0 0px 2px 0px rgba(0,0,0,0.2);*/
+}
+
+/*
+.cart{
+    margin-left: 165vh;
+    position: relative;
+}
+.cart .active{
+    width:450px;
+} */
+
+/*expansion of search bar*/
+.container{
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: transparent;
+    border-color: #ed4529;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container.active{
+    width: 400px;
+}
+.container .icon{
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .icon .search{
+    font-size: 21px;
+    cursor: pointer;
+    color: black;
+}
+.container .input{
+    position: relative;
+    width: 300px;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .input input{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 14px;
+    font-family: candara;
+    color: #213d59;
+    outline: none;
+}
+.container .input .clear{
+    position: absolute;
+    right: -25px;
+    top:50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #213d59;
+}
+
+/*RIGHT DIV AND ITS PROPERTIES*/
+
+#rightdiv{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+   /* box-shadow: 0 0px 4px 0px rgba(0,0,0,0.2);*/
+    background-color: white;
+    width: 18.33%;
+    float: right;
+}
+.ad-banner{
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 1px 8px rgb(88, 88, 87);
+    /*box-shadow: 0 3px 10px rgba(0,0,0,0.2);*/
+
+}
+.ad-banner p{
+    width:auto;
+    display: inline-block;
+    font-family: candara;
+    /*letter-spacing: 0.2em;
+    background: #ed4529;*/
+    font-size: 20px;
+    padding: 2px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #ed4529; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+
+}
+/* The typing effect */
+@keyframes typing {
+    from { max-width: 0 }
+    to { max-width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ed4529; }
+  }
+
+#video{
+    margin-top: 5px;
+    cursor: pointer;
+}
+/*
+
+.notifications{
+    margin-top: 15px;
+    margin-left: 10px;
+
+}
+.notifications h4{
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+}
+.notifications-btn{
+    padding:5px;
+    margin-top: -7px;
+}
+.btnn{
+    border-radius: 10px;
+    border-color: #ed4529;
+    background: transparent;
+    transition: 0.5s;
+}
+.btnn:hover{
+    font-weight: 600;
+    color: #213d59;
+    border-color: black;
+
+}*/
+/*
+.view-cart{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.view-cart h4{
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+
+}
+.view-cart h5{
+    font-size: 15px;
+    font-family: ebrima;
+}*/
+.cart{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.cart h4{
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+}
+.cart #thecart{
+    margin-left: 20px;
+}
+#itemcount {
+    position:absolute;
+    display: none;
+    margin-left: 35px;
+    margin-bottom: 50px;
+    width:22px;
+    height:22px;
+    border-radius: 50%;
+    background: #ed4529;
+    color:white;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom:4px;
+}
+
+.compare{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.compare h4{
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+}
+.compare h5{
+    font-size: 15px;
+    font-family: ebrima;
+}
+.total{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.total h4{
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+}
+
+.wishlist{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.wishlist h4{
+    font-weight: 600;
+    font-size: 19px;
+    font-family: "Baskerville Old Face";
+}
+.wishlist h5{
+    font-size: 15px;
+    font-family: ebrima;
+}
+
+/*LEFT DIV AND ITS PROPERTIES*/
+#leftdiv{
+   /* box-shadow: 0 0px 4px 0px rgba(0,0,0,0.2);*/
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    background-color: white;
+    width: 18.33%;
+    height:98vh ;
+    float: left;
+}
+.cover-pic{
+    width:100%;
+    height:200px;
+    object-fit: cover;
+}
+.profile-pic {
+    margin-top: 10px;
+    width:120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.text {
+    margin-left: 20px;
+    font-family: candara;
+    color:#213d59;
+}
+.text h5{
+    color: grey;
+    font-size: 17px;
+}
+.profile-button{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: -40px;
+    position: relative;
+}
+.button{
+    padding: 5px;
+    margin-left: 4px;
+    background: transparent;
+    border-radius: 10px;
+    border-color: #213d59;
+    font-family: candara;
+}
+
+.item-container{
+    margin-top: 20px;
+    text-align: center;
+}
+.item-container h4{
+    font-weight: bold;
+    font-size: 15px;
+    font-family: candara;
+    color: #213d59;
+    letter-spacing: 0.1em;
+}
+/*FOR DROPDOWNS*/
+.drop-button{
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+    display: block;
+}
+.drop-button span{
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+ul{
+    margin-left: -19px;
+    margin-top: 10px;
+    position: absolute;
+    background: white;
+    list-style: none;
+    width: 18.33%;
+    border-radius: 5px;
+    display: block;
+}
+
+ul li {
+    line-height: 40px;
+    padding: 8px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid red;
+}
+ul li label{
+    font-size: 18px;
+}
+ul li a{
+    color: #213d59;
+    text-decoration:none;
+    /*display: block;*/
+}
+.drop-1, .drop-2{
+    display: none;
+}
+.drop-1 .opt:hover{
+    background: transparent;
+    width:25vh;
+    border: 1px solid #ed4529;
+    border-radius: 27px;
+}
+.drop-2 .opt:hover{
+    background: transparent;
+    width:25vh;
+    border: 1px solid #ed4529;
+    border-radius: 27px;
+}
+/*
+.drop-1 li a {
+    position: relative;
+    text-decoration: none;
+    color:#213d59;
+    letter-spacing: 0.5px;
+}
+.drop-1 li a::after{
+    content: "";
+    position: absolute;
+    background-color: #ed4529;
+    height: 3px;
+    width:0;
+    left:0;
+    bottom:-10px;
+    transition: 0.3s;
+}
+.drop-1 li a:hover{
+    font-weight: 600;
+}
+.drop-1 li a:hover::after{
+    width:100%;
+}
+
+*/
+
+ul li a:hover,
+ul li label:hover{
+  font-weight: 600;
+}
+
+ul ul li a{
+    font-family: candara;
+    color: #213d59;
+    font-size: 15px;
+}
+
+ ul ul {
+    position: static;
+
+ }
+ul ul li{
+    line-height: 30px;
+    padding-left: 40px;
+    border-bottom: none;
+}
+ul li span{
+    color: #ed4529;
+    font-size: 20px;
+    float: right;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+/*MID DIV AND IT'S PROPERTIES*/
+#middiv{
+    background-color: white;
+    width: 63.33%;
+    margin: 0 auto;
+}
+.sales{
+    font-family: candara;
+    color: #213d59;
+    margin-top: 3px;
+    margin-left: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+}
+.sales::after{
+    content: "";
+    position: absolute;
+    background-color: #ed4529;
+    height: 2px;
+    width:0;
+    left:0;
+    bottom:-5px;
+    transition: 0.3s;
+}
+.sales:hover{
+    font-weight: 600;
+}
+.sales:hover::after{
+    width:100%;
+}
+.product-text{
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.product-text h4{
+    color:#213d59;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "Baskerville Old Face";
+    letter-spacing: 0.1em;
+}
+.product-text h5{
+    color: #ed4529;
+    font-size: 15px;
+    margin-left: 45px; /*the prduct text margin left, plus this margin left*/
+}
+
+/*FOR PRODUCT CONTAINER*/
+.product-container{
+    display: flex;
+}
+.crotch-image{
+    width:150px;
+}
+.product-descrip{
+    color: #213d59;
+    font-family: candara;
+    padding: 6px;
+    margin-top: 45px;
+    height:120px;
+    width: 155px;
+    border-top-right-radius: 27px;
+    border-bottom-right-radius: 27px;
+    background: #ed4529;
+    
+    background: linear-gradient(
+        320deg,
+        #213d59 15%,
+        white 15%,
+        #ed4529 100%
+    );
+}
+.product-descrip h4, h5{
+    margin-left: 5px;
+}
+.product-descrip h4{
+    font-size: 19px;
+    font-weight: 600;
+}
+.product-descrip h5{
+    margin-left: 45px;
+    font-weight: 700;
+}
+.product-descrip button{
+    margin-left: 9px;
+    border-radius: 27px;
+    padding: 3px;
+    width:120px;
+    background: transparent;
+}
+.product-descrip button:hover{
+    font-weight: 800;
+    border-color: #fc2600;
+}
+
+.more-btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 27px;
+    font-weight: bold;
+    border:2px solid #213d59;
+    background:transparent;
+    color:black;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+    font-family: "Baskerville Old Face"
+}
+.more-span{
+    background: #ed4529;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.7s;
+}
+.more-btn:hover span{
+      width: 100%;
+}
+.more-btn:hover{
+    border: none;
+}
+
+.see-more {
+    width:100%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: white;
+}

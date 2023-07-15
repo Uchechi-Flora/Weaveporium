@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <script type = "text/javascript" src = "./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./assets/css/weaveporium.css" />
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link href="./assets/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <title>WEAVEPORIUM</title>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="./images/logo.png" width="150px">
+    </a>
+
+    <div class="container">
+      <div class="icon">
+          <i class="search fa fa-search" style="color: #6aa2cd;"></i>
+      </div>
+      <div class="input">
+          <input type="text" placeholder="SEARCH" id="search">
+          <i class="clear fa fa-times" style="color: #6aa2cd;"></i>
+      </div>
+  </div>
+    <!--
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search">
+      <i class="fas fa-times"></i>
+    </div> -->
+
+    <ul class="nav-options">
+      <li><a href="#">Log in</a></li>
+      <li>
+        <a href="#">Sign up &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="./crotcheter_signuppage.html">As a Crotcheter</a></li>
+          <li><a href="#" style="margin-left: -80px;">As a Buyer</a></li>
+        </ul>
+      </li>
+      <li><a href="#" id="menu"><i class="fa fa-bars"></i></a></li>
+    </ul>
+    
+  </nav>
+  <div id="footer">
+    <div class="shape"></div>
+
+    <div class="column">
+      <span style="display: flex;">
+        <i class="fa-solid fa-briefcase" style="color: black;"></i>
+        <h6 style="margin-left: 7px;">Company</h6>
+      </span>
+      <a href="#" class="footer-links">About</a>
+      <a href="#" class="footer-links">Blogs</a>
+      <a href="#" class="footer-links">Contact</a>
+      <a href="#" class="footer-links">Help Center</a>
+    </div>
+    
+    <div class="column">
+      <span style="display: flex;">
+        <i class="fa-solid fa-award" style="color: black;"></i>
+        <h6 style="margin-left: 7px;">Accolades</h6>
+      </span>
+      <a href="#" class="footer-links">Customer Reviews</a>
+      <a href="#" class="footer-links">Partnerships</a>
+      <a href="#" class="footer-links">Recognitions</a>
+    </div>
+    
+    <div class="column">
+      <span style="display: flex;">
+        <i class="fa-solid fa-users" style="color: black;"></i>
+        <h6 style="margin-left: 7px;">Socials</h6>
+      </span>
+      <a href="#" class="footer-links"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" class="footer-links"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="footer-horizontal">
+    <hr>
+      <a href="#"class="last-footer">Privacy Policy</a>
+      <a href="#" class="last-footer">Delivery</a>
+      <a href="#" class="last-footer">Security</a>
+      <span class="copyright">&copy; 2023 Flora's Zone</span>
+    </div>
+
+  
+    <!--JUMBOTRON-->
+    <div class="jumbotron">
+
+      <div class="firstjumbo">
+        <ol class="ol">
+          <li><h5>Turn your passion into profit!</h5></li>
+          <li><h5>Start selling today and unlock your potential</h5></li>
+          <li><h5>Join our community of successful sellers!</h5></li>
+          <li><h5>Sign up now and reach thousands of customers</h5></li>
+          <div  class="typing-effect">
+          <li><h5 style="margin-top: 115px; text-align: center;">Monetize your talents and make money from your skills!</h5></li>
+        </div>
+        </ol>
+      </div>
+      
+      <div class="sndjumbo">
+        <img class="slideshow active" src="./images/jumbo10.jpeg">
+        <img class="slideshow" src="./images/jumbo2.jpeg">
+        <img class="slideshow" src="./images/jumbo9.jpeg">
+        <img class="slideshow" src="./images/jumbo4.png">
+
+        <div class="slide-btn">
+          <span id="prevButton"><i class="fas fa-chevron-left"></i></span>
+          <span id="nextButton"><i class="fas fa-chevron-right"></i></span>
+        </div>
+
+      </div>
+
+      <div class="thdjumbo">
+        <ol>
+          <li><h5>Discover unique products from trusted sellers</h5></li>
+          <li><h5>Find exactly what you need,in fashion </h5></li>
+          <li><h5>Connect with sellers who share your interests</h5></li>
+          <li><h5>Buy with confidence from our vetted sellers</h5></li>
+        </ol>
+        <!--
+        <div class="jumbimg">
+          <img src="./images/jumbo5.jpg" class="img">
+        </div> -->
+      </div>
+    </div> <!--END OF JUMBOTRON -->
+
+    <div class="fashion_title">
+      <h3>Fashion Items For You!</h3>
+    </div>
+
+    <!--FOR THE DISPLAYING OF THE ITEMS-->
+      <div class="product-container">
+        <div class="product">
+          <div class="image">
+            <img src="./images/top1.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Fabulous Tank Top</h4>
+            <p class="user">See more @queen_treasure</p>
+            <p class="price"><strong>₦5,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P1-->
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/top3.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Pretty Top</h4>
+            <p class="user">See more @ms_baize</p>
+            <p class="price"><strong>₦7,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P2-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/top2.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Look Good Top</h4>
+            <p class="user">See more @justqueens</p>
+            <p class="price"><strong>₦1,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P3-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/scarf3.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Pretty Scarf</h4>
+            <p class="user">See more @scarfgirl</p>
+            <p class="price"><strong>₦3,500</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P4-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/scarf1.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>White Scarf</h4>
+            <p class="user">See more @queen_white</p>
+            <p class="price"><strong>₦3,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P5-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/mitt1.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Fashion Mittens</h4>
+            <p class="user">See more @baybee_daeze</p>
+            <p class="price"><strong>₦4,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P6-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/top4.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Nice Tank Top</h4>
+            <p class="user">See more @chioma_uju</p>
+            <p class="price"><strong>₦5,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P7-->
+
+
+        <div class="product">
+          <div class="image">
+            <img src="./images/scarf4.jpeg" class="product-img"> 
+          </div>
+          <div class="info">
+            <h4>Nice Scarf</h4>
+            <p class="user">See more @ayo_jim</p>
+            <p class="price"><strong>₦2,000</strong></p>
+          </div>
+          <div class="ratings">
+            <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart">Add to Cart</button>
+          </div>
+        </div> <!--END OF P8-->
+
+
+          <div class="product">
+            <div class="image">
+              <img src="./images/top5.jpeg" class="product-img"> 
+            </div>
+            <div class="info">
+              <h4>2 Piece</h4>
+              <p class="user">See more @onyinyechi</p>
+              <p class="price"><strong>₦10,000</strong></p>
+            </div>
+            <div class="ratings">
+              <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="cart-btn">
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div> <!--END OF P9-->
+
+
+          <div class="product">
+            <div class="image">
+              <img src="./images/jumbo8.jpeg" class="product-img"> 
+            </div>
+            <div class="info">
+              <h4>White Mini-skirt</h4>
+              <p class="user">See more @lookgoodbabe</p>
+              <p class="price"><strong>₦5,500</strong></p>
+            </div>
+            <div class="ratings">
+              <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="cart-btn">
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div> <!--END OF P10-->
+
+
+          <div class="product">
+            <div class="image">
+              <img src="./images/mitt2.jpeg" class="product-img"> 
+            </div>
+            <div class="info">
+              <h4>Cool Mittens</h4>
+              <p class="user">See more @uchejenny</p>
+              <p class="price"><strong>₦4,000</strong></p>
+            </div>
+            <div class="ratings">
+              <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="cart-btn">
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div> <!--END OF P11-->
+
+          <div class="product">
+            <div class="image">
+              <img src="./images/top6.jpeg" class="product-img"> 
+            </div>
+            <div class="info">
+              <h4>Black Design Top</h4>
+              <p class="user">See more @gothiclaura</p>
+              <p class="price"><strong>₦8,000</strong></p>
+            </div>
+            <div class="ratings">
+              <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                  <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="cart-btn">
+              <button class="btn-cart">Add to Cart</button>
+            </div>
+          </div> <!--END OF P12-->
+      </div> <!--END OF ITEM CONTAINER-->
+
+
+
+          <div class="house_title">
+            <h3>Household Collections For You!</h3>
+          </div>
+
+          <!--FOR DISPLAYING HOUSEHOLD ITEMS-->
+          <div class="product-container">
+            <div class="product">
+              <div class="image">
+                <img src="./images/ph2.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Soft Pot Holder</h4>
+                <p class="user">See more @lukenwamma</p>
+                <p class="price"><strong>₦2,200</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P1-->
+
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/ph1.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Cute Pot Holders</h4>
+                <p class="user">See more @mummyT</p>
+                <p class="price"><strong>₦5,100</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P2-->
+
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/hh2.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Household Item</h4>
+                <p class="user">See more @goodhome</p>
+                <p class="price"><strong>₦2,100</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P3-->
+
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/ph3.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Pot Holder</h4>
+                <p class="user">See more @queen_treasure</p>
+                <p class="price"><strong>₦1,500</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P4-->
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/coas.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Cute Coasters</h4>
+                <p class="user">See more @chioma_uju</p>
+                <p class="price"><strong>₦1,900</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P5-->
+      
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/ph4.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Pot Holder</h4>
+                <p class="user">See more @queen_treasure</p>
+                <p class="price"><strong>₦1,500</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P6-->
+
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/carp.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Cozy Rug</h4>
+                <p class="user">See more @home_decor</p>
+                <p class="price"><strong>₦2,500</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P7-->
+      
+
+            <div class="product">
+              <div class="image">
+                <img src="./images/blanket.jpeg" class="product-img"> 
+              </div>
+              <div class="info">
+                <h4>Cozy Blanket</h4>
+                <p class="user">See more @goodhome</p>
+                <p class="price"><strong>₦1,900</strong></p>
+              </div>
+              <div class="ratings">
+                <i class="fa-solid fa-star checked" style="color:#ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-solid fa-star checked" style="color: #ed4529;"></i>
+                    <i class="fa-regular fa-star"></i>
+              </div>
+              <div class="cart-btn">
+                <button class="btn-cart">Add to Cart</button>
+              </div>
+            </div> <!--END OF P8-->
+
+
+
+    
+
+<script>
+  //WHEN CART BTN IS CLICKED IT SHOULD CHANGE TO CHECK-MARK
+  $(".btn-cart").click(function(){
+    $(this).html('&#10004').text()})
+
+  
+  //EXPANSION AND CLEARING OF SEARCH AND SEARCH BAR
+  let search = document.querySelector(".search");
+    let clear = document.querySelector(".clear");
+
+    search.onclick = function() {
+        document.querySelector(".container").classList.toggle('active');
+    }
+    clear.onclick = function() {
+        document.getElementById("search").value = "";
+    }
+
+    //TO VIEW AND HIDE FOOTER
+    const menu = document.getElementById('menu');
+    const popElement = document.querySelector('#footer');
+    const footer = document.querySelector('.footer-horizontal');
+
+    popElement.style.visibility = 'hidden'
+    footer.style.visibility = 'hidden'
+
+
+    menu.addEventListener('click', () => {
+      if (popElement.style.visibility === 'hidden') {
+    popElement.style.visibility = 'visible';
+    footer.style.visibility = 'visible';
+  } else {
+    popElement.style.visibility = 'hidden';
+    footer.style.visibility = 'hidden';
+  }
+
+    })
+
+    //SLIDESHOW FOR SECOND DIV
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    const slides = document.querySelectorAll(".slideshow");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides[currentIndex].style.display = "none";
+      slides[currentIndex].classList.remove("active");
+
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides[currentIndex].style.display = "block";
+      slides[currentIndex].classList.add("active");
+    }
+    showSlide(0);
+
+    prevButton.addEventListener("click", function() {
+      showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener("click", function() {
+      showSlide(currentIndex + 1);
+    });
+
+    // Optional: Automatic slideshow
+    
+    setInterval(function() {
+      showSlide(currentIndex + 1);
+    }, 5000); 
+    
+
+
+
+</script>
+
+    <script src="./bootstrap assets/js/bootstrap.min.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+</body>

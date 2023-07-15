@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <script type = "text/javascript" src = "./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./assets/css/buyer_profile.css" />
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link href="./assets/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <title>Buyer Profile</title>
+</head>
+<body>
+
+
+<!--NAVIGATION BAR TO INCLUDE LOGO AND SETTINGS ICON AND SEARCH BAR-->
+<nav>
+    <a href="#"><img src="./images/logo.png" width="150px"></a>
+    <div class="container">
+        <div class="icon">
+            <i class="search fa fa-search" style="color: #ed4529;"></i>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="SEARCH" id="search">
+            <i class="clear fa fa-times"></i>
+        </div>
+    </div>
+    </nav>
+<!--MAKING TWO DIVS SIDE BY SIDE TO CONTAIN BUYER INFO-->
+<!--THE RIGHT DIV THAT CONTAINS USER INSIGHTS-->
+<div id="rightdiv">
+    <h4>FLORA'S INSIGHTS</h4>
+    <p>VIEW WHAT COLORS, DESIGNS, CATEGORIES OF CROTCHET FLORA LIKES</p>
+    <img src="./images/mainchart.png" width="500">
+    <h3>FLORA'S FAVOURITE ITEMS</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Household Items</th>
+                <th>Purchase Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span>
+                        <i class="fa-solid fa-mitten" style="margin-right: 9px;"></i>
+                        MITTENS
+                    </span></td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>
+                    <span>
+                        <img src="./images/pot-holder.png" width="18px" style="margin-right: 9px;">
+                        POT HOLDER
+                    </span></td>
+                <td>590</td>
+            </tr>
+            <thead>
+            <tr>
+                <th>Fashion</th>
+                <th>Purchase Points</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <span>
+                    <img src="./images/winter-scarf.png" width="18px" style="margin-right: 9px;">
+                    SCARF
+                </span>
+            </td>
+            <td>950</td>
+        </tr>
+        <tr>
+            <td>
+                <span>
+                    <img src="./images/tank-top.png" width="18px" style="margin-right: 9px;">
+                    TOP
+                </span>
+            </td>
+            <td>1500</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!--THE LEFT DIV, THAT CONTAINS PROFILE PIC, ETC-->
+<div id="leftdiv">
+    <div class="profile-card">
+        <img src="./images/sea.jpg" class="cover-pic">
+        <img src="./images/logo.png" class="profile-pic">
+    </div>
+<div class="profile-text">
+    <h4>FLORA ZONE</h4>
+    <h5>@floras_zone</h5>
+    <span>
+        <img src="./images/nigeria.png" width="18px" style="margin-right: 5px;">
+        Port-Harcourt, Nigeria.
+    </span>
+    <div class="text">
+        <h5>PURCHASE POINTS: 4040</h5>
+    </div>
+    <div class="profile-button">
+   <button class="button"><i class="fa-solid fa-phone" style="margin-right: 5px; color: #213d59;"></i>CALL</button>
+   <button class="button"><i class="fa-solid fa-message" style="margin-right: 5px; color: #213d59;"></i>MESSAGE</button>
+</div>
+</div>
+</div>
+<div class="others-text">
+    <h5>OTHER ACCOUNTS YOU MAY LIKE: </h5>
+</div>
+<div class="other-accounts">
+    <div class="accounts" id="account1">
+        <div> <img src="./images/d.jpg" class="square"></div>
+        <img src="./images/logo.png" class="circle">
+        <h4>Flora Zone</h4>
+        <h5>4000 points</h5>
+    </div>
+    <div class="accounts" id="account2">
+        <div class="square">  <img src="./images/f.jpg" class="square"></div>
+        <img src="./images/fz.png" class="circle">
+        <h4>Temitayo Smith</h4>
+        <h5>3100 points</h5>
+    </div>
+    <div class="accounts" id="account3">
+        <div class="square">  <img src="./images/h.jpg" class="square"></div>
+        <img src="./images/sky.jpg" class="circle">
+        <h4>Zainab Matthew</h4>
+        <h5>1250 points</h5>
+    </div>
+    <div class="accounts" id="account4">
+        <div class="square">  <img src="./images/g.jpg" class="square"></div>
+        <img src="./images/sky3.jpg" class="circle">
+        <h4>Sharon Johnson</h4>
+        <h5>4060 points</h5>
+    </div>
+    <div class="accounts" id="account5">
+        <div class="square">  <img src="./images/i.jpg" class="square"></div>
+        <img src="./images/a.jpg" class="circle">
+        <h4>Ogechi Paul</h4>
+        <h5>3700 points</h5>
+    </div>
+    <div class="accounts" id="account6">
+        <div class="square">  <img src="./images/k.jpg" class="square"></div>
+        <img src="./images/e.jpg" class="circle">
+        <h4>Olumide Ayo</h4>
+        <h5>4100 points</h5>
+    </div>
+    <div class="accounts" id="account7">
+        <div class="square">  <img src="./images/b.jpg" class="square"></div>
+        <img src="./images/b.jpg" class="circle">
+        <h4>Ifeoma Joe</h4>
+        <h5>2000 points</h5>
+    </div>
+    <div class="accounts" id="account8">
+        <div class="square">  <img src="./images/j.jpg" class="square"></div>
+        <img src="./images/c.jpg" class="circle">
+        <h4>Princess Paula</h4>
+        <h5>1090 points</h5>
+    </div>
+
+    <!--
+    <div class="accounts" id="account9">
+        <div class="square"></div>
+        <div class="circle"></div>
+        <h5>4000 points</h5>
+    </div>
+    <div class="accounts" id="account10">
+        <div class="square"></div>
+        <div class="circle"></div>
+        <h5>4000 points</h5>
+    </div>
+    <div class="accounts" id="account11">
+        <div class="square"></div>
+        <div class="circle"></div>
+        <h5>4000 points</h5>
+    </div>  -->
+
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    //expansion of search bar
+    let search = document.querySelector(".search");
+    let clear = document.querySelector(".clear");
+
+    search.onclick = function() {
+        document.querySelector(".container").classList.toggle('active');
+    }
+    clear.onclick = function() {
+        document.getElementById("search").value = "";
+    }
+
+    function leftScroll() {
+        const left =  document.querySelector(".accounts");
+        left.scrollBy(200, 0)
+    }
+    function rightScroll() {
+        const right =  document.querySelector(".accounts");
+        right.scrollBy(-200, 0)
+    }
+</script>
+
+
+
+
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.min.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+</body>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
+    <script type = "text/javascript" src = "./assets/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="./assets/css/crotcheter_profile.css" />
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link href="./assets/js/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <title>CROTCHETER PROFILE</title>
+</head>
+<body>
+
+    <!--NAVIGATION BAR TO INCLUDE LOGO, CART ICON AND SEARCH BAR-->
+<nav>
+    <a href="#"><img src="./images/logo.png" width="150px"></a>
+
+    
+    <div class="container">
+        <div class="icon">
+            <i class="search fa fa-search" style="color: #ed4529;"></i>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="SEARCH" id="search">
+            <i class="clear fa fa-times"></i>
+        </div>
+    </div>
+    </nav>
+
+<!--TO CONTAIN SELLER'S LOCATION AND OTHER OPTIONS FOR BUYERS-->
+  <div id="rightdiv"> 
+    <div class="ad-banner">
+        <video autoplay muted loop plays-inline width="300" height="300"id="video">
+            <source src="./images/ad.mp4" type="video/mp4">
+        </video>
+    <p>DOWNLOAD AVTAR</p> </div>
+    <!--
+    <img src="./images/map.jpg" width="300" height="300" class="ad">
+    <video autoplay muted loop plays-inline width="300" height="300"id="video">
+        <source src="./images/ad.mp4" type="video/mp4">
+    </video> -->
+   
+
+  <!--TEXTS FOR LEFT DIV 
+    <div class="notifications">
+        <h4>Turn on notifications for this page</h4>
+   <!--NOTIFICATION BUTTON <div class="notifications-btn">
+    <button class="btnn"><i class="fa-solid fa-bell" style="margin-right: 5px; color: #ed4529;" id="bell"></i>YES</button>
+   </div>
+    </div> --> 
+
+    <!--VIEW CART INFO
+    <div class="view-cart">
+        <h4>View your cart</h4>
+        <h5>You have no items in your cart</h5>
+    </div> -->
+    <div class="cart">
+        <h4>My Cart</h4>
+        <span id="itemcount"></span>
+        <i class="fas fa-lg fa-shopping-cart" id="thecart" style="color: #213d59;"></i>
+    </div> 
+    <!--COMPARE PRODUCTS-->
+    <div class="compare">
+        <h4>Compare products</h4>
+        <h5>Add to cart to compare</h5>
+    </div>
+    <!--TOTAL-->
+    <div class="total">
+        <h4>Total Amount</h4>
+        <input type="text" id="amount" style="width:150px; font-weight: 700;">
+    </div>
+<!--WISHLIST-->
+<div class="wishlist">
+    <h4>My wishlist</h4>
+    <h5>You have not added any items to your wishlist</h5>
+</div>
+</div>
+
+
+  <!--LEFT DIV TO CONTAIN PROFILE INFO-->
+  <div id="leftdiv"> 
+    <div class="profile-card">
+        <img src="./images/fz.png" class="profile-pic">
+        <div class="text">
+          <!--  <img src="./images/crot_logo.png" width="50" style="margin-left: 50px;"> -->
+            <h4>FLORA ZONE</h4>
+            <h5>@floras_zone</h5>
+            <span>
+                <img src="./images/nigeria.png" width="18px" style="margin-right: 5px;">
+                Port-Harcourt, Nigeria.
+            </span>
+            </div>
+            <div style="margin-left:20px;">
+                <i class="fa-solid fa-star checked" style="color: orange;"></i>
+                <i class="fa-solid fa-star checked" style="color: orange;"></i>
+                <i class="fa-solid fa-star checked" style="color: orange;"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="profile-button">
+                <button class="button"><i class="fa-solid fa-phone" style="margin-right: 5px; color: #213d59;"></i>CALL</button>
+                <button class="button"><i class="fa-solid fa-message" style="margin-right: 5px; color: #213d59;"></i>MESSAGE</button>
+        
+            </div>
+            <!--ITEMS AVAILABLE DROPDOWN-->
+ 
+<div class="item-container">
+<h4 class="item-text">CATEGORIES AVAILABLE</h4></div>
+            <ul class="menu">
+                <li>
+                    <label for="btn-2" class="first">FASHION</label> 
+                    <span class="fas fa-caret-down" id="caret-1"></span>
+                    <!--<input type="checkbox" id="btn-2"> -->
+                    <ul class="drop-1">
+                        <li class="opt"><a href="#" >TOP</a></li>
+                        <li class="opt"><a href="#" >SCARF</a></li>
+                        <li class="opt"><a href="#" >GOWN</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-3" class="first">HOUSEHOLD ITEMS</label> 
+                    <span class="fas fa-caret-down" id="caret-2"></span>
+                    <!--<input type="checkbox" id="btn-3"> -->
+                    <ul class="drop-2">
+                        <li class="opt"><a href="#">MITTENS</a></li>
+                       <li class="opt"><a href="#">POT&nbsp;HOLDER</a></li>
+                    </ul>
+                </li>
+               <li><a href="#">AMIGURUMI CROTCHET</a></li>
+               <li><a href="#">BAVARIAN CROTCHET</a></li>
+               <li><a href="#">BROOM STICK CROTCHET</a></li> 
+               <li><a href="#">BULLION CROTCHET</a></li> 
+    </ul>
+    </div>
+  </div> 
+
+<!--TO CONTAIN SELLER'S WORKS-->
+  <div id="middiv"> 
+    <div class="cover-card">
+        <img src="./images/banner.png" class="cover-pic">
+        <a href="#" class="sales">View products with 50% off</a>
+    </div>
+<div class="product-text">
+    <h4>ALL PRODUCTS</h4>
+    <h5>10 items</h5>
+</div>
+
+<!--FIRST FRAME THAT WOULD DISPLAY FIRST SET OF PRDUCTS, each product would have a div-->
+<div id="first-frame" style="margin-left: 10px;margin-top: 10px; display: flex; justify-content: space-between;">
+
+<!--PRODUCT CONTAINER PER PRODUCT, the container holds, the imaage, description and add to cart button-->
+<div class="product-container">
+    <div class="product-image">
+        <img src="./images/top2.jpeg" class="crotch-image">
+    </div>
+    <div class="product-descrip">
+        <h4>MM-TOP</h4>
+        <h5 class="price">₦3,200</h5>
+        <button class="cart-btn">ADD TO CART</button>
+    </div>
+</div>
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="./images/ph3.jpeg" class="crotch-image">
+    </div>
+    <div class="product-descrip">
+        <h4>TP-POT HOLDER</h4>
+        <h5 class="price">₦3,000</h5>
+        <button class="cart-btn">ADD TO CART</button>
+    </div>
+</div>
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="./images/mitt2.jpeg" class="crotch-image">
+    </div>
+    <div class="product-descrip">
+        <h4>QT-MITTENS</h4>
+        <h5 class="price">₦2,500</h5>
+        <button class="cart-btn">ADD TO CART</button>
+    </div>
+</div>
+
+</div>  <!--END OF FIRST FRAME-->
+
+
+<!--SECOND FRAME-->
+<div id="snd-frame" style="margin-left: 10px;margin-top: 10px; display: flex;">
+
+<div class="product-container">
+    <div class="product-image">
+        <img src="./images/scarf2.jpeg" class="crotch-image">
+    </div>
+    <div class="product-descrip">
+        <h4>ED-SCARF</h4>
+        <h5 class="price">₦1,000</h5>
+        <button class="cart-btn">ADD TO CART</button>
+    </div>
+</div>
+
+<div class="product-container" style="margin-left: 62px;">
+    <div class="product-image">
+        <img src="./images/mitt4.jpeg" class="crotch-image">
+    </div>
+    <div class="product-descrip">
+        <h4>AD-MITTENS</h4>
+        <h5 class="price">₦2,000</h5>
+        <button class="cart-btn">ADD TO CART</button>
+    </div>
+</div>
+<div class="see-more" style="margin-left: 48%; margin-top: 100px;">
+    <button class="more-btn" id="next"><span class="more-span"></span>SEE MORE</button>
+</div>
+<!--END OF SECOND FRAME-->    </div>
+
+
+
+<!--THIRD FRAME-->
+<div id="thd-frame" style="margin-left: 10px;margin-top: 10px; display: flex;justify-content: space-between;">
+    <div class="product-container">
+        <div class="product-image">
+            <img src="./images/scarf1.jpeg" class="crotch-image">
+        </div>
+        <div class="product-descrip">
+            <h4>JN-SCARF</h4>
+            <h5 class="price">₦1,000</h5>
+            <button class="cart-btn">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image">
+            <img src="./images/scarf4.jpeg" class="crotch-image">
+        </div>
+        <div class="product-descrip">
+            <h4>PZ-SCARF</h4>
+            <h5 class="price">₦1,200</h5>
+            <button class="cart-btn">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image">
+            <img src="./images/top4.jpeg" class="crotch-image">
+        </div>
+        <div class="product-descrip">
+            <h4>FZ-TOP</h4>
+            <h5 class="price">₦3,200</h5>
+            <button class="cart-btn">ADD TO CART</button>
+        </div>
+    </div>
+</div> <!--END OF THIRD FRAME-->
+
+<!--FOURTH FRAME-->
+<div id="fot-frame" style="margin-left: 10px;margin-top: 10px; display: flex;">
+    <div class="product-container">
+        <div class="product-image">
+            <img src="./images/mitt3.jpeg" class="crotch-image">
+        </div>
+        <div class="product-descrip">
+            <h4>QQ-MITTENS</h4>
+            <h5 class="price">₦1,800</h5>
+            <button class="cart-btn">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="product-container" style="margin-left: 62px;">
+        <div class="product-image">
+            <img src="./images/top1.jpeg" class="crotch-image">
+        </div>
+        <div class="product-descrip">
+            <h4>BZ-TOP</h4>
+            <h5 class="price">₦2,700</h5>
+            <button class="cart-btn">ADD TO CART</button>
+        </div>
+    </div>
+
+
+<div class="see-more" style="margin-left: 48%; margin-top: 100px;">
+    <button class="more-btn" id="previous"><span class="more-span"></span>SEE PREVIOUS</button>
+</div>
+
+</div>
+
+<script>
+
+    //FOR DROPDOWN
+    let caret_1 = $("#caret-1")
+    let caret_2 = $("#caret-2")
+    let drop_1 = $(".drop-1")
+    let drop_2 = $(".drop-2")
+
+   
+    caret_1.click(function() {
+        drop_1.css("display", "block")
+    })
+    caret_2.click(function() {
+        drop_2.css("display", "block")
+    })
+   //let cart = document.querySelector("#thecart");
+     //expansion of search bar
+     let search = document.querySelector(".search");
+    let clear = document.querySelector(".clear");
+
+    search.onclick = function() {
+        document.querySelector(".container").classList.toggle('active');
+        //document.querySelector(".cart").classList.toggle('active');
+    }
+    clear.onclick = function() {
+        document.getElementById("search").value = "";
+    }
+
+// FOR DISPLAYING NUMBER OF ITEMS IN CART
+    var itemcount = 0
+    function check() {
+    $(".cart-btn").click(function(){
+    $(this).html('&#10004').text()
+    itemcount ++
+    $("#itemcount").html(itemcount).css('display', 'block')
+  }) 
+}
+check()
+
+//FOR TOGGLING OF FRAMES
+$("#thd-frame").hide()
+$("#fot-frame").hide()
+
+
+$("#next").click(function() {
+    $("#first-frame").toggle()
+    $("#snd-frame").toggle()
+
+    $("#thd-frame").toggle()
+    $("#fot-frame").toggle()
+})
+$("#previous").click(function() {
+    $("#thd-frame").toggle()
+    $("#fot-frame").toggle()
+
+    $("#first-frame").toggle()
+    $("#snd-frame").toggle()
+})
+
+</script>
+
+
+  
+    <script src="./bootstrap assets/js/bootstrap.min.js"></script>
+    <script src="./bootstrap assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+</body>
+</html>
